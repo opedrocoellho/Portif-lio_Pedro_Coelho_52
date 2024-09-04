@@ -1,0 +1,463 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 236px;
+    background-color: #336472; 
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 809px;
+    margin-left: 10px;
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu li {
+    margin: 35px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff; /* Cor do texto padrão */
+    font-size: 18px;
+    display: block;
+    padding: 8px 10px; /* Reduz o padding para evitar deslocamento */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 3px; /* Bordas levemente arredondadas */
+}
+
+.menu a.active {
+    background-color: #ffffff; /* Cor de fundo do item ativo */
+    color: #336472; /* Cor do texto do item ativo */
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #ffffff;
+    color: #336472;
+    font-weight: bold;
+}
+
+.portfolio-button {
+    margin-top: 4px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 70%;
+}
+
+.content p {
+    font-size: 20px;
+    color: #666;
+    position: absolute;
+    bottom: 65%;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+    margin-top: 50px; 
+    padding-left: 20px; 
+    background: linear-gradient(to right, #547c87, #336472);
+    padding: 20px; 
+    border-radius: 10px; 
+}
+
+.projects img {
+    width: 310px; 
+    height: 200px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.projects img:hover {
+    transform: scale(1.2); 
+}
+
+.acervo {
+    position: relative;
+    padding: 40px 0; /* Aumenta o padding superior para evitar que o conteúdo fique escondido */
+}
+
+.line-container {
+    position: relative;
+    margin-left: 236px; 
+    padding-top: 76px; 
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    top: 50%; 
+    width: 100%; 
+    height: 98px; 
+    background-color: #336472; 
+    transform: translateY(-50%); 
+}
+
+.acervo h2 {
+    position: relative; /* Alinha o título acima da linha */
+    margin-top: 0;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 48px;
+    color: #336472; /* Cor do título */
+    text-align: center;
+    z-index: 1; /* Garante que o título fique acima da linha */
+    background: #ffffff; /* Cor de fundo para garantir legibilidade sobre a linha */
+    padding: 0 10px; /* Adiciona um pouco de preenchimento para o texto não colar na linha */
+    padding-right: 100px;
+}
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%; 
+    height: 100%; 
+    transition: transform 1s ease-in-out; 
+}
+
+.carousel-image {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    flex-shrink: 0; 
+    transition: transform 1s ease-in-out;
+    padding: 20px; 
+}
+html {
+    scroll-behavior: smooth; 
+}
+.skills {
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 100vh; /* Espaço equivalente à altura de uma página antes da seção */
+}
+
+.skills-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura total da viewport */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+.skills-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha à esquerda */
+    height: 100vh; /* Ocupa a altura da tela */
+    padding: 0 20px; /* Espaçamento lateral */
+    background-color: #ffffff; /* Cor de fundo */
+}
+
+.skills-bar {
+    position: absolute;
+    top: 30%; /* Centraliza verticalmente */
+    left: 0; /* Alinha à esquerda */
+    width: 60%; /* Largura da faixa */
+    height: 130px; /* Altura da faixa */
+    background-color: #336472; /* Cor da faixa */
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 48px; /* Tamanho da fonte */
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1; /* Faixa acima da caixa de texto */
+    padding-left: 80px; /* Espaçamento à esquerda */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+
+.skills-box {
+    background-color: #f0f0f0; /* Cor da caixa de texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 30px; /* Aumenta o padding */
+    width: 480px; /* Largura da caixa de texto */
+    min-height: 520px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra da caixa */
+    text-align: center;
+    margin-left: auto; /* Alinha a caixa à direita */
+    z-index: 2; /* Garante que a caixa fique acima da faixa */
+    font-size: 24px;
+    padding-top: 40px;
+}
+
+
+.sobre-mim-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #336472; /* Cor de fundo semelhante à imagem */
+}
+
+.sobre-mim-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.texto-sobre-mim {
+    flex: 1;
+    padding-right: 20px;
+    color: #000000; /* Cor do texto */
+}
+
+.texto-sobre-mim h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.texto-sobre-mim p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.foto-sobre-mim {
+    flex: 0 0 300px; /* Define um tamanho fixo para a imagem */
+    text-align: center;
+}
+
+.foto-sobre-mim img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px; /* Borda arredondada para a imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorção */
+    object-position: center;
+    background-color: #ffffff;
+    border: 5px solid #f0f0f0; /* Bordas claras ao redor da imagem */
+}
+
+#sobre-mim {
+    margin-bottom: 200px;
+}
+
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #336472; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* O botão começa escondido */
+    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+}
+
+#back-to-top-btn:hover {
+    background-color: #547c87; 
+}
+
+.menu a.active {
+    background-color: #ffffff; /* Cor de fundo diferente para indicar ativo */
+    color: #336472; /* Cor do texto diferente */
+    font-weight: bold; /* Negrito para destacar */
+    padding: 10px 20px; /* Adiciona preenchimento para destacar ainda mais */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.contato-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.contato-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #336472;
+    text-align: center;
+}
+
+.contato-section p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contato-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.portfolio-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #336472;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #336472;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    color: #666666;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Pedro Coelho</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <button id="back-to-top-btn" onclick="scrollToTop()">&#8679;</button>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Pedro Coelho</h1>
+            <img src="foto_Pedro_Coelho.jpg" alt="Foto de Pedro Coelho" class="profile-pic">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#sobre-mim">Sobre Mim</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#portfolio" class="portfolio-button">Ver Portfólio</a>
+        </div>
+        <div class="content">
+            <h2>Eu sou estudante de programação</h2>
+            <p>no Colégio Cotemig</p>
+            <div class="projects">
+                <img src="vegans.png" alt="Site 1">
+                <img src="construtora.png" alt="Site 2">
+                <img src="eli_site.png" alt="Site 3">
+            </div>
+        </div>
+    </div>
+    <section id="pages" class="acervo">
+        <div class="line-container">
+            <div class="line"></div>
+            <h2>Acervo Pessoal</h2>
+        </div>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="vegans.png" alt="Site 1" class="carousel-image small">
+                <img src="construtora.png" alt="Site 2" class="carousel-image large">
+                <img src="eli_site.png" alt="Site 3" class="carousel-image small">
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills-container">
+        <div class="skills-bar">Skills Pessoais</div>
+        <div class="skills-box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper aliquet. Integer in mauris eu libero suscipit bibendum. Maecenas faucibus mollis interdum.</p>
+        </div>
+    </section>
+    <section id="sobre-mim" class="sobre-mim-section">
+        <div class="sobre-mim-container">
+            <div class="texto-sobre-mim">
+                <h2>Sobre mim</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper aliquet. Integer in mauris eu libero suscipit bibendum. Maecenas faucibus mollis interdum.</p>
+            </div>
+            <div class="foto-sobre-mim">
+                <img src="foto_Pedro_Coelho.jpg" alt="Foto de Pedro Coelho">
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio-section">
+        <h2>Meu Portfólio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <a href="https://opedrocoellho.github.io/DELIVERY/" target="_blank">
+                    <img src="vegans.png" alt="Projeto 1">
+                </a>
+                <h3>Site Vegano</h3>
+                <p>Desenvolvimento de um site vegano com foco em receitas e sustentabilidade.</p>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://opedrocoellho.github.io/Construtora-M-P-Coelho/"_blank">
+                    <img src="construtora.png" alt="Projeto 2">
+                </a>
+                <h3>Construtora M&P Coelho</h3>
+                <p>Landing page desenvolvida para uma empreiteira de construção civil.</p>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://link-do-site-eli.com" target="_blank">
+                    <img src="eli_site.png" alt="Projeto 3">
+                </a>
+                <h3>Site Eli Photos</h3>
+                <p>Plataforma de tecnologia de galeria de fotos.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contato" class="contato-section">
+        <h2>Entre em Contato</h2>
+        <p>Se você tiver alguma dúvida ou gostaria de saber mais sobre meus projetos, preencha o formulário abaixo ou entre em contato diretamente.</p>
+        <form class="contato-form">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Assunto</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Endereço:</strong> Rua Irmãos Kennedy, 177, Cidade Nova, Belo Horizonte</p>
+            <p><strong>Telefone:</strong> (31) 98416-3651</p>
+            <p><strong>Email:</strong> pedrocoelho221@gmail.com</p>
+        </div>
+    </section>  
+</body>
+</html>
